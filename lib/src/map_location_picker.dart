@@ -82,6 +82,9 @@ class MapLocationPicker extends StatefulWidget {
   /// Show back button (default: true)
   final bool showBackButton;
 
+  /// Show Clear button (default: true)
+  final bool showClearButton;
+
   /// Popup route on next press (default: false)
   final bool canPopOnNextButtonTaped;
 
@@ -191,6 +194,7 @@ class MapLocationPicker extends StatefulWidget {
     required this.onNext,
     this.currentLatLng = const LatLng(28.8993468, 76.6250249),
     this.showBackButton = true,
+    this.showClearButton = false,
     this.canPopOnNextButtonTaped = false,
     this.backButton,
     this.showMoreOptions = true,
@@ -391,6 +395,7 @@ class _MapLocationPickerState extends State<MapLocationPicker> {
                 sessionToken: widget.sessionToken,
                 showBackButton: widget.showBackButton,
                 strictbounds: widget.strictbounds,
+                showClearButton: widget.showClearButton,
                 topCardColor: widget.topCardColor,
                 topCardMargin: widget.topCardMargin,
                 topCardShape: widget.topCardShape,
