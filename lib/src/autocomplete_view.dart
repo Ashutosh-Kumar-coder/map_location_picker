@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart' hide ErrorBuilder;
 import 'package:form_builder_extra_fields/form_builder_extra_fields.dart';
@@ -483,14 +485,14 @@ class PlacesAutocomplete extends StatelessWidget {
                     hintText: searchHintText,
                     border: InputBorder.none,
                     filled: true,
-                    suffixIcon: (showClearButton && initialValue == null)
+                    suffixIcon: (showClearButton)
                         ? IconButton(
                             icon: const Icon(Icons.close),
                             onPressed: () => textController.value.clear(),
                           )
                         : suffixIcon,
                   ),
-              name: 'Search',
+              name: 'Search address...',
               controller: initialValue == null ? textController.value : null,
               selectionToTextTransformer: (result) {
                 return result.description ?? "";

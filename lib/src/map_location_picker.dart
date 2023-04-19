@@ -55,6 +55,9 @@ class MapLocationPicker extends StatefulWidget {
   /// Top card text field border radius
   final BorderRadius? borderRadius;
 
+  /// Top card text field border radius
+  final InputDecoration? inputDecoration;
+
   /// Top card text field hint text
   final String searchHintText;
 
@@ -181,6 +184,7 @@ class MapLocationPicker extends StatefulWidget {
     this.topCardShape = const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(12)),
     ),
+    this.inputDecoration,
     this.borderRadius = const BorderRadius.all(Radius.circular(12)),
     this.searchHintText = "Start typing to search",
     this.bottomCardShape = const RoundedRectangleBorder(
@@ -377,6 +381,7 @@ class _MapLocationPickerState extends State<MapLocationPicker> {
                 mounted: mounted,
                 searchController: _searchController,
                 borderRadius: widget.borderRadius,
+                decoration: widget.inputDecoration,
                 offset: widget.offset,
                 radius: widget.radius,
                 backButton: widget.backButton,
