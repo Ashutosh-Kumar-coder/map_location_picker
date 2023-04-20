@@ -448,18 +448,22 @@ class _MapLocationPickerState extends State<MapLocationPicker> {
                       itemBuilder: (context) => const [
                         PopupMenuItem(
                           value: MapType.normal,
+                          textStyle: TextStyle(color: Colors.black45, fontSize: 16),
                           child: Text('Normal'),
                         ),
                         PopupMenuItem(
                           value: MapType.hybrid,
+                          textStyle: TextStyle(color: Colors.black45, fontSize: 16),
                           child: Text('Hybrid'),
                         ),
                         PopupMenuItem(
                           value: MapType.satellite,
+                          textStyle: TextStyle(color: Colors.black45, fontSize: 16),
                           child: Text('Satellite'),
                         ),
                         PopupMenuItem(
                           value: MapType.terrain,
+                          textStyle: TextStyle(color: Colors.black45, fontSize: 16),
                           child: Text('Terrain'),
                         ),
                       ],

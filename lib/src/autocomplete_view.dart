@@ -475,7 +475,7 @@ class PlacesAutocomplete extends StatelessWidget {
         color: topCardColor,
         child: ListTile(
           minVerticalPadding: 0,
-          contentPadding: const EdgeInsets.only(right: 4, left: 4),
+          contentPadding: const EdgeInsets.only(right: 4, left: 0),
           leading: showBackButton ? const BackButton() : backButton,
           title: ClipRRect(
             borderRadius: borderRadius,
@@ -484,13 +484,13 @@ class PlacesAutocomplete extends StatelessWidget {
                   InputDecoration(
                     hintText: searchHintText,
                     border: InputBorder.none,
-                    filled: true,
                     fillColor: Colors.white,
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+                    hintStyle: const TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.w400),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 0),
                     suffixIcon: (showClearButton)
-                        ? IconButton(
-                            icon: const Icon(Icons.close),
-                            onPressed: () => textController.value.clear(),
+                        ? GestureDetector(
+                            child: const Icon(Icons.close),
+                            onTap: () => textController.value.clear(),
                           )
                         : suffixIcon,
                   ),

@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
         children: [
           PlacesAutocomplete(
             searchController: _controller,
-            apiKey: "YOUR_API_KEY_HERE",
+            apiKey: "AIzaSyCRcaxAqagsXzMV7xGbMWpOY3UY9YQe--k",
             mounted: mounted,
             showBackButton: false,
             onGetDetailsByPlaceId: (PlacesDetailsResponse? result) {
@@ -56,7 +56,7 @@ class _MyAppState extends State<MyApp> {
                   return AlertDialog(
                     title: const Text('Example'),
                     content: PlacesAutocomplete(
-                      apiKey: "YOUR_API_KEY_HERE",
+                      apiKey: "AIzaSyCRcaxAqagsXzMV7xGbMWpOY3UY9YQe--k",
                       searchHintText: "Search for a place",
                       mounted: mounted,
                       showBackButton: false,
@@ -119,7 +119,7 @@ class _MyAppState extends State<MyApp> {
                   MaterialPageRoute(
                     builder: (context) {
                       return MapLocationPicker(
-                        apiKey: "YOUR_API_KEY_HERE",
+                        apiKey: "AIzaSyCRcaxAqagsXzMV7xGbMWpOY3UY9YQe--k",
                         canPopOnNextButtonTaped: true,
                         currentLatLng: const LatLng(29.121599, 76.396698),
                         onNext: (GeocodingResult? result) {
